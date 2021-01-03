@@ -1,4 +1,4 @@
-my_packages = c("RCurl,data.frame")
+my_packages = c("RCurl")
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
@@ -27,7 +27,7 @@ server <- function(input, output, session) {
     
     peluangcovid <- "peluangcovid"
     df <- rbind(df, peluangcovid)
-    input <- transpose(df)
+    input <- t(df)
     write.table(input,"input.csv", sep=",", quote = FALSE, row.names = FALSE, col.names = FALSE)
     
     test <- read.csv(paste("input", ".csv", sep=""), header = TRUE)
