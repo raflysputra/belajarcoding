@@ -1,7 +1,6 @@
 library(data.table)
 library(randomForest)
 
-covid[,c(1,5)] <- lapply(covid[,c(1,5)], factor)
 model <- readRDS("model.rds")
 server <- function(input, output, session) {
   
