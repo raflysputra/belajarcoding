@@ -8,6 +8,7 @@ install_if_missing = function(p) {
 
 invisible(sapply(my_packages, install_if_missing))
 
+model <- readRDS("model.rds")
 server <- function(input, output, session) {
   
   # Input Data
