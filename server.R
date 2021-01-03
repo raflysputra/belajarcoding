@@ -1,13 +1,4 @@
-my_packages = c("RCurl")
-
-install_if_missing = function(p) {
-  if (p %in% rownames(installed.packages()) == FALSE) {
-    install.packages(p)
-  }
-}
-
-invisible(sapply(my_packages, install_if_missing))
-
+covid[,c(1,5)] <- lapply(covid[,c(1,5)], factor)
 model <- readRDS("model.rds")
 server <- function(input, output, session) {
   
