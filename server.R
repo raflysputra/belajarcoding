@@ -3,7 +3,7 @@ server <- function(input, output, session) {
   # Input Data
   datasetInput <- reactive({  
     
-    # outlook,temperature,humidity,windy,play
+  
     df <- data.frame(
       Name = c("ï..zonakota",
                "suhubadan",
