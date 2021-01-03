@@ -1,4 +1,4 @@
-my_packages = c("RCurl,data.table")
+my_packages = c("RCurl,data.frame")
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
